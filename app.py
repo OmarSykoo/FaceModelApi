@@ -6,7 +6,7 @@ from FaceRecService import FaceModelService
 
 app = Flask(__name__)
 face_service = FaceModelService()
-# hello lolllyyyy <3<3<3
+
 @app.route("/upload", methods=["POST"])
 def upload_image():
     image_bytes = request.data  # Read raw bytes from request
