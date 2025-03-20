@@ -20,3 +20,8 @@ class FaceModelService:
         except Exception as e:
             print(f"Error generating embedding: {str(e)}")
             return []
+        
+    # return true if head is centered correctly else return false 
+    def CheckIfImageIsCentered(self, image_bytes: bytes ) :
+        image = Image.open(io.BytesIO(image_bytes))
+        image_np = np.array(image)
